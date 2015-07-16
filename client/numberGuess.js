@@ -1,0 +1,2 @@
+Template.numberGuess.helpers({
+})
