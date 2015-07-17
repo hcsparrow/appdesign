@@ -6,9 +6,10 @@ var time = 0;
 var firstName;
 var bool = true;
 
-Template.colorGame.events({
-	"click #colorButton": function(event){
 
+Template.colorGame.events({
+	"submit #formEnter": function(event){
+		event.preventDefault();
 		if(limit > 0)
 		{
 			var n = Math.floor(Math.random() * 8);
@@ -37,7 +38,7 @@ Template.colorGame.events({
 		else
 		{
 			bool = false;
-			$("#gameOver").html('You have finished the game. Your time is ' + (time/1000) + " seconds");
+			$("#gameOver").html('You have finished the game. Your time is ' + time + " seconds");
 		}
 
 	}
@@ -51,10 +52,9 @@ function braction(){
 }
 
 Template.colorGame.rendered = function(){
-		time = 0;
 		limit = 14;
 
-		interval = Meteor.setInterval(braction, 1);
+		interval = Meteor.setInterval(braction, 1000);
 
 		var n = Math.floor(Math.random() * 8);
 		var c = Math.floor(Math.random() * 8);
