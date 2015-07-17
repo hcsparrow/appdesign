@@ -11,7 +11,7 @@ Template.numberGuess.events({
 
 
 		if(number.length==0){
-			alert("please enter a number");
+			alert("please enter a number" + number);
 		}
 		else{
 			var number2= parseInt(number);
