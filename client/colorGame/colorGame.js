@@ -1,6 +1,6 @@
 var name = ["red", "orange", "yellow", "green", "blue", "pink", "purple", "brown", "black"];
 var color = ["#ff0000", "#ff6600", "#ffff00", "#33cc33", "#0000ff", "#ff33cc", "#990099", "#663300", "#000000"];
-var limit = 15
+var limit = 14;
 var interval;
 var time = 0;
 var firstName;
@@ -52,7 +52,7 @@ function braction(){
 
 Template.colorGame.rendered = function(){
 		time = 0;
-		limit = 15;
+		limit = 14;
 
 		interval = Meteor.setInterval(braction, 1);
 
