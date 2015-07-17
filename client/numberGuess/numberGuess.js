@@ -5,7 +5,8 @@ var time = 0;
 
 Template.numberGuess.events({
 
-	"click #guessButton": function(event){
+	"submit #formEnter": function(event){
+	event.preventDefault();
 		var number = $("#number").val();
 
 
@@ -17,19 +18,20 @@ Template.numberGuess.events({
 
 			if(number2 == random){
 				gameOver = true;
-				$("#message").html("Correct")
-				$("#endGame").html("You have finished the game. Your time is " + (time/1000) + " seconds.")
+				$("#message").html(number+" is correct!");
+				$("#number").val("");
+				$("#endGame").html("You have finished the game. Your time is " + time + " seconds.");
 			}
 			else if(number2 < random){
-				$("#message").html("higher");
+				$("#message").html("higher than "+number);
 				$("#number").val("");
 			}
 			else if(number2 < 0 || number2 > 100){
-				$("#message").html("number has to be between 0 and 100");
+				$("#message").html(number+" is not between 0 and 100");
 				$("#number").val("");
 			}
 			else{
-				$("#message").html("lower");
+				$("#message").html("lower than "+number);
 				$("#number").val("");
 			}
 	
