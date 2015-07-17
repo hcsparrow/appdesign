@@ -8,4 +8,8 @@ Template.welcome.events({
 		Router.go('numberGuess');
 	},
 
+	"click #numberDiv2": function(event){
+		Router.go('numberGuess2');
+	},
+
 })
