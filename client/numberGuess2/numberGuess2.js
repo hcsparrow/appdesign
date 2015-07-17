@@ -8,6 +8,9 @@ Template.numberGuess2.events({
 	"click #higherButton": function(event){
 		var number = $("#number").val();
 
+	"click #lowerButton": function(event){
+		var number = $("#number").val();
+
 
 		if(number.length==0){
 			alert("please enter a number");
@@ -48,7 +51,7 @@ function braction(){
 
 
 Template.numberGuess2.rendered = function(){
-		interval=Meteor.setInterval(braction, 1);
+		interval=Meteor.setInterval(braction, 1000);
 		random=Math.floor((Math.random() * 100) + 1);
 		$("#test").html(random);
 

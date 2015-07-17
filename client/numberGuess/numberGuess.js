@@ -21,14 +21,16 @@ Template.numberGuess.events({
 				$("#endGame").html("You have finished the game. Your time is " + (time/1000) + " seconds.")
 			}
 			else if(number2 < random){
-				$("#message").html("higher")
+				$("#message").html("higher");
+				$("#number").val("");
 			}
 			else if(number2 < 0 || number2 > 100){
-				$("#message").html("number has to be between 0 and 100")
+				$("#message").html("number has to be between 0 and 100");
+				$("#number").val("");
 			}
-
 			else{
-				$("#message").html("lower")
+				$("#message").html("lower");
+				$("#number").val("");
 			}
 	
 
