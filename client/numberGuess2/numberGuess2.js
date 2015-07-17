@@ -3,9 +3,9 @@ var interval;
 var random;
 var time = 0;
 
-Template.numberGuess.events({
+Template.numberGuess2.events({
 
-	"click #guessButton": function(event){
+	"click #higherButton": function(event){
 		var number = $("#number").val();
 
 
@@ -47,9 +47,11 @@ function braction(){
 }
 
 
-Template.numberGuess.rendered = function(){
+Template.numberGuess2.rendered = function(){
 		interval=Meteor.setInterval(braction, 1);
 		random=Math.floor((Math.random() * 100) + 1);
 		$("#test").html(random);
 
 };
+
+
