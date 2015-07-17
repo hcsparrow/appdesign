@@ -17,6 +17,6 @@ Template.colorGame.events({
 		var userInput = $("#exampleInputColor").val();
 
 		<!-- then if statement -->
-
+		
 	}
 })
