@@ -51,6 +51,8 @@ function braction(){
 }
 
 Template.colorGame.rendered = function(){
+		time = 0;
+		limit = 15;
 
 		interval = Meteor.setInterval(braction, 1);
 
