@@ -9,6 +9,7 @@ Template.numberGuess.events({
 	event.preventDefault();
 		var number = $("#number").val();
 
+		alert("please enter a number");
 
 		if(number.length==0){
 			alert("please enter a number");
