@@ -14,7 +14,7 @@ Template.numberGuess.events({
 			alert("please enter a number");
 		}
 		else{
-			var number2= parseInt(number);
+			var number2=parseInt(number);
 
 			if(number2 == random){
 				gameOver = true;
